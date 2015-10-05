@@ -42,6 +42,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAttackRank = new System.Windows.Forms.Label();
+            this.lblAttackLevel = new System.Windows.Forms.Label();
+            this.lblAttackExp = new System.Windows.Forms.Label();
             this.Highscore.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +149,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblAttackRank);
+            this.tabPage1.Controls.Add(this.lblAttackLevel);
+            this.tabPage1.Controls.Add(this.lblAttackExp);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.lblOverall);
             this.tabPage1.Controls.Add(this.lblExperince);
             this.tabPage1.Controls.Add(this.lblOverallRank);
@@ -178,6 +186,39 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Adventure Log";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Attack:";
+            // 
+            // lblAttackRank
+            // 
+            this.lblAttackRank.AutoSize = true;
+            this.lblAttackRank.Location = new System.Drawing.Point(61, 40);
+            this.lblAttackRank.Name = "lblAttackRank";
+            this.lblAttackRank.Size = new System.Drawing.Size(0, 13);
+            this.lblAttackRank.TabIndex = 11;
+            // 
+            // lblAttackLevel
+            // 
+            this.lblAttackLevel.AutoSize = true;
+            this.lblAttackLevel.Location = new System.Drawing.Point(120, 40);
+            this.lblAttackLevel.Name = "lblAttackLevel";
+            this.lblAttackLevel.Size = new System.Drawing.Size(0, 13);
+            this.lblAttackLevel.TabIndex = 12;
+            // 
+            // lblAttackExp
+            // 
+            this.lblAttackExp.AutoSize = true;
+            this.lblAttackExp.Location = new System.Drawing.Point(188, 40);
+            this.lblAttackExp.Name = "lblAttackExp";
+            this.lblAttackExp.Size = new System.Drawing.Size(0, 13);
+            this.lblAttackExp.TabIndex = 13;
             // 
             // Form1
             // 
@@ -214,6 +255,10 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label lblAttackRank;
+        private System.Windows.Forms.Label lblAttackLevel;
+        private System.Windows.Forms.Label lblAttackExp;
+        private System.Windows.Forms.Label label1;
     }
 }
 
