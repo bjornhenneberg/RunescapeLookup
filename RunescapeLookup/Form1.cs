@@ -23,6 +23,7 @@ namespace RunescapeLookup
         {
             setTotal();
             setAttack();
+            setDefence();
         }
 
         private void btnLookup_Click(object sender, EventArgs e)
@@ -51,6 +52,14 @@ namespace RunescapeLookup
             lblAttackRank.Text = attack.Rank.ToString();
             lblAttackLevel.Text = attack.Level.ToString();
             lblAttackExp.Text = attack.Experience.ToString();
+        }
+
+        public void setDefence()
+        {
+            Skill defence = pd.getDefence();
+            lblDefenceRank.Text = defence.Rank.ToString();
+            lblDefenceLevel.Text = defence.Level.ToString();
+            lblDefenceExp.Text = defence.Experience.ToString();
         }
 
         public void resetAll()

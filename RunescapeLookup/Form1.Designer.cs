@@ -40,12 +40,16 @@
             this.lblExperince = new System.Windows.Forms.Label();
             this.Highscore = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblAttackRank = new System.Windows.Forms.Label();
             this.lblAttackLevel = new System.Windows.Forms.Label();
             this.lblAttackExp = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblDefenceRank = new System.Windows.Forms.Label();
+            this.lblDefenceLevel = new System.Windows.Forms.Label();
+            this.lblDefenceExp = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Highscore.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -149,6 +153,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblDefenceRank);
+            this.tabPage1.Controls.Add(this.lblDefenceLevel);
+            this.tabPage1.Controls.Add(this.lblDefenceExp);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.lblAttackRank);
             this.tabPage1.Controls.Add(this.lblAttackLevel);
             this.tabPage1.Controls.Add(this.lblAttackExp);
@@ -167,34 +175,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Highscore";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(252, 206);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Minigames";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(252, 206);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Adventure Log";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Attack:";
             // 
             // lblAttackRank
             // 
@@ -219,6 +199,67 @@
             this.lblAttackExp.Name = "lblAttackExp";
             this.lblAttackExp.Size = new System.Drawing.Size(0, 13);
             this.lblAttackExp.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Attack:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(252, 206);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Minigames";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(252, 206);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Adventure Log";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblDefenceRank
+            // 
+            this.lblDefenceRank.AutoSize = true;
+            this.lblDefenceRank.Location = new System.Drawing.Point(61, 57);
+            this.lblDefenceRank.Name = "lblDefenceRank";
+            this.lblDefenceRank.Size = new System.Drawing.Size(0, 13);
+            this.lblDefenceRank.TabIndex = 15;
+            // 
+            // lblDefenceLevel
+            // 
+            this.lblDefenceLevel.AutoSize = true;
+            this.lblDefenceLevel.Location = new System.Drawing.Point(120, 57);
+            this.lblDefenceLevel.Name = "lblDefenceLevel";
+            this.lblDefenceLevel.Size = new System.Drawing.Size(0, 13);
+            this.lblDefenceLevel.TabIndex = 16;
+            // 
+            // lblDefenceExp
+            // 
+            this.lblDefenceExp.AutoSize = true;
+            this.lblDefenceExp.Location = new System.Drawing.Point(188, 57);
+            this.lblDefenceExp.Name = "lblDefenceExp";
+            this.lblDefenceExp.Size = new System.Drawing.Size(0, 13);
+            this.lblDefenceExp.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Defence:";
             // 
             // Form1
             // 
@@ -259,6 +300,10 @@
         private System.Windows.Forms.Label lblAttackLevel;
         private System.Windows.Forms.Label lblAttackExp;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDefenceRank;
+        private System.Windows.Forms.Label lblDefenceLevel;
+        private System.Windows.Forms.Label lblDefenceExp;
+        private System.Windows.Forms.Label label5;
     }
 }
 
