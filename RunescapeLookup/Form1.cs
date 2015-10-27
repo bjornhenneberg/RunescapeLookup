@@ -17,6 +17,8 @@ namespace RunescapeLookup
         {
             InitializeComponent();
             this.Text = "Runescape Lookup";
+            txtPlayerName.KeyDown += new KeyEventHandler(txtPlayerName_KeyDown);
+            CenterToScreen();
         }
 
         public void iniData()
@@ -24,18 +26,44 @@ namespace RunescapeLookup
             setTotal();
             setAttack();
             setDefence();
+            setStrength();
         }
 
         private void btnLookup_Click(object sender, EventArgs e)
         {
+            setStats();
+        }
 
-            pd.emptyData();
-            resetAll();
-            string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=" + txtPlayerName.Text;
+        public void setStats()
+        {
+            if (txtPlayerName.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter a Runescape name.","Error!", MessageBoxButtons.OK ,MessageBoxIcon.Error);
+            }
+            else
+            {
+                pd.emptyData();
+                resetAll();
+                string hiscoreurl = "http://services.runescape.com/m=hiscore/index_lite.ws?player=" + txtPlayerName.Text;
+                string advlogurl = "http://services.runescape.com/m=adventurers-log/rssfeed?searchName=" + txtPlayerName.Text;
 
-            pd.getPlayerData(url);
+                pd.getPlayerData(hiscoreurl);
 
-            iniData();
+                iniData();
+            }
+        }
+
+        public void txtPlayerName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                setStats();
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                resetAll();
+                txtPlayerName.Text = "";
+            }
         }
 
         public void setTotal()
@@ -62,11 +90,32 @@ namespace RunescapeLookup
             lblDefenceExp.Text = defence.Experience.ToString();
         }
 
+        public void setStrength()
+        {
+            Skill strength = pd.getStrength();
+            lblStrRank.Text = strength.Rank.ToString();
+            lblStrLvl.Text = strength.Level.ToString();
+            lblStrExp.Text = strength.Experience.ToString();
+        }
+
         public void resetAll()
         {
             lblOverallRank.Text = "";
             lblOverallLevel.Text = "";
             lblOverallExp.Text = "";
+
+            lblAttackExp.Text = "";
+            lblAttackLevel.Text = "";
+            lblAttackRank.Text = "";
+
+            lblStrExp.Text = "";
+            lblStrLvl.Text = "";
+            lblStrRank.Text = "";
+
+            lblDefenceExp.Text = "";
+            lblDefenceLevel.Text = "";
+            lblDefenceRank.Text = "";
+
         }
     }
 }

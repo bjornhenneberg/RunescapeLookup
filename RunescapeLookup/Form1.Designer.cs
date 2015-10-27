@@ -40,16 +40,20 @@
             this.lblExperince = new System.Windows.Forms.Label();
             this.Highscore = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblDefenceRank = new System.Windows.Forms.Label();
+            this.lblDefenceLevel = new System.Windows.Forms.Label();
+            this.lblDefenceExp = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblAttackRank = new System.Windows.Forms.Label();
             this.lblAttackLevel = new System.Windows.Forms.Label();
             this.lblAttackExp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lblDefenceRank = new System.Windows.Forms.Label();
-            this.lblDefenceLevel = new System.Windows.Forms.Label();
-            this.lblDefenceExp = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblStrRank = new System.Windows.Forms.Label();
+            this.lblStrLvl = new System.Windows.Forms.Label();
+            this.lblStrExp = new System.Windows.Forms.Label();
+            this.lblStrength = new System.Windows.Forms.Label();
             this.Highscore.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +62,7 @@
             // 
             this.txtPlayerName.Location = new System.Drawing.Point(88, 12);
             this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.Size = new System.Drawing.Size(100, 20);
+            this.txtPlayerName.Size = new System.Drawing.Size(116, 20);
             this.txtPlayerName.TabIndex = 0;
             // 
             // lblPlayerName
@@ -72,9 +76,9 @@
             // 
             // btnLookup
             // 
-            this.btnLookup.Location = new System.Drawing.Point(194, 12);
+            this.btnLookup.Location = new System.Drawing.Point(210, 12);
             this.btnLookup.Name = "btnLookup";
-            this.btnLookup.Size = new System.Drawing.Size(78, 20);
+            this.btnLookup.Size = new System.Drawing.Size(62, 20);
             this.btnLookup.TabIndex = 2;
             this.btnLookup.Text = "Load";
             this.btnLookup.UseVisualStyleBackColor = true;
@@ -143,16 +147,20 @@
             // Highscore
             // 
             this.Highscore.Controls.Add(this.tabPage1);
-            this.Highscore.Controls.Add(this.tabPage2);
             this.Highscore.Controls.Add(this.tabPage3);
+            this.Highscore.Controls.Add(this.tabPage2);
             this.Highscore.Location = new System.Drawing.Point(12, 38);
             this.Highscore.Name = "Highscore";
             this.Highscore.SelectedIndex = 0;
-            this.Highscore.Size = new System.Drawing.Size(260, 232);
+            this.Highscore.Size = new System.Drawing.Size(260, 613);
             this.Highscore.TabIndex = 10;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblStrRank);
+            this.tabPage1.Controls.Add(this.lblStrLvl);
+            this.tabPage1.Controls.Add(this.lblStrExp);
+            this.tabPage1.Controls.Add(this.lblStrength);
             this.tabPage1.Controls.Add(this.lblDefenceRank);
             this.tabPage1.Controls.Add(this.lblDefenceLevel);
             this.tabPage1.Controls.Add(this.lblDefenceExp);
@@ -171,10 +179,43 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(252, 206);
+            this.tabPage1.Size = new System.Drawing.Size(252, 587);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Highscore";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblDefenceRank
+            // 
+            this.lblDefenceRank.AutoSize = true;
+            this.lblDefenceRank.Location = new System.Drawing.Point(61, 57);
+            this.lblDefenceRank.Name = "lblDefenceRank";
+            this.lblDefenceRank.Size = new System.Drawing.Size(0, 13);
+            this.lblDefenceRank.TabIndex = 15;
+            // 
+            // lblDefenceLevel
+            // 
+            this.lblDefenceLevel.AutoSize = true;
+            this.lblDefenceLevel.Location = new System.Drawing.Point(120, 57);
+            this.lblDefenceLevel.Name = "lblDefenceLevel";
+            this.lblDefenceLevel.Size = new System.Drawing.Size(0, 13);
+            this.lblDefenceLevel.TabIndex = 16;
+            // 
+            // lblDefenceExp
+            // 
+            this.lblDefenceExp.AutoSize = true;
+            this.lblDefenceExp.Location = new System.Drawing.Point(188, 57);
+            this.lblDefenceExp.Name = "lblDefenceExp";
+            this.lblDefenceExp.Size = new System.Drawing.Size(0, 13);
+            this.lblDefenceExp.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Defence:";
             // 
             // lblAttackRank
             // 
@@ -214,7 +255,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(252, 206);
+            this.tabPage2.Size = new System.Drawing.Size(252, 587);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Minigames";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -223,49 +264,49 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(252, 206);
+            this.tabPage3.Size = new System.Drawing.Size(252, 587);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Adventure Log";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // lblDefenceRank
+            // lblStrRank
             // 
-            this.lblDefenceRank.AutoSize = true;
-            this.lblDefenceRank.Location = new System.Drawing.Point(61, 57);
-            this.lblDefenceRank.Name = "lblDefenceRank";
-            this.lblDefenceRank.Size = new System.Drawing.Size(0, 13);
-            this.lblDefenceRank.TabIndex = 15;
+            this.lblStrRank.AutoSize = true;
+            this.lblStrRank.Location = new System.Drawing.Point(61, 73);
+            this.lblStrRank.Name = "lblStrRank";
+            this.lblStrRank.Size = new System.Drawing.Size(0, 13);
+            this.lblStrRank.TabIndex = 19;
             // 
-            // lblDefenceLevel
+            // lblStrLvl
             // 
-            this.lblDefenceLevel.AutoSize = true;
-            this.lblDefenceLevel.Location = new System.Drawing.Point(120, 57);
-            this.lblDefenceLevel.Name = "lblDefenceLevel";
-            this.lblDefenceLevel.Size = new System.Drawing.Size(0, 13);
-            this.lblDefenceLevel.TabIndex = 16;
+            this.lblStrLvl.AutoSize = true;
+            this.lblStrLvl.Location = new System.Drawing.Point(120, 73);
+            this.lblStrLvl.Name = "lblStrLvl";
+            this.lblStrLvl.Size = new System.Drawing.Size(0, 13);
+            this.lblStrLvl.TabIndex = 20;
             // 
-            // lblDefenceExp
+            // lblStrExp
             // 
-            this.lblDefenceExp.AutoSize = true;
-            this.lblDefenceExp.Location = new System.Drawing.Point(188, 57);
-            this.lblDefenceExp.Name = "lblDefenceExp";
-            this.lblDefenceExp.Size = new System.Drawing.Size(0, 13);
-            this.lblDefenceExp.TabIndex = 17;
+            this.lblStrExp.AutoSize = true;
+            this.lblStrExp.Location = new System.Drawing.Point(188, 73);
+            this.lblStrExp.Name = "lblStrExp";
+            this.lblStrExp.Size = new System.Drawing.Size(0, 13);
+            this.lblStrExp.TabIndex = 21;
             // 
-            // label5
+            // lblStrength
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Defence:";
+            this.lblStrength.AutoSize = true;
+            this.lblStrength.Location = new System.Drawing.Point(3, 73);
+            this.lblStrength.Name = "lblStrength";
+            this.lblStrength.Size = new System.Drawing.Size(50, 13);
+            this.lblStrength.TabIndex = 18;
+            this.lblStrength.Text = "Strength:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 279);
+            this.ClientSize = new System.Drawing.Size(284, 663);
             this.Controls.Add(this.Highscore);
             this.Controls.Add(this.btnLookup);
             this.Controls.Add(this.lblPlayerName);
@@ -304,6 +345,10 @@
         private System.Windows.Forms.Label lblDefenceLevel;
         private System.Windows.Forms.Label lblDefenceExp;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblStrRank;
+        private System.Windows.Forms.Label lblStrLvl;
+        private System.Windows.Forms.Label lblStrExp;
+        private System.Windows.Forms.Label lblStrength;
     }
 }
 

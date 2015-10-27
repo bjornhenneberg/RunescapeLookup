@@ -21,6 +21,11 @@ namespace RunescapeLookup
             playerData.Clear();
         }
 
+        public List<Skill> getPlayerDataList()
+        {
+            return playerData;
+        }
+
         public void getPlayerData(string url)
         {
             WebClient client = new WebClient();
