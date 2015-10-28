@@ -10,6 +10,7 @@ namespace RunescapeLookup
     class Highscore
     {
         List<Skill> playerData = new List<Skill>();
+        List<Minigames> minigameData = new List<Minigames>();
 
         public Highscore()
         {

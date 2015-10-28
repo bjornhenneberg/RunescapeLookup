@@ -19,6 +19,7 @@ namespace RunescapeLookup
             this.Text = "Runescape Lookup";
             txtPlayerName.KeyDown += new KeyEventHandler(txtPlayerName_KeyDown);
             CenterToScreen();
+            Icon = Properties.Resources.overall;
         }
 
         public void iniData()
@@ -116,6 +117,11 @@ namespace RunescapeLookup
             lblDefenceLevel.Text = "";
             lblDefenceRank.Text = "";
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://headlezz.dk");
         }
     }
 }
